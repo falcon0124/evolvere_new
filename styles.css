@@ -1,0 +1,73 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    border: none;
+    border-radius: 0;
+    height: 80px;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+}
+
+.custom-logo {
+    height: 40px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    font-size: 18px;
+    padding: 25px 25px 5px 25px;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px; 
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-default .navbar-nav > li > a:hover::after {
+    width: 60%;
+    left: 20%;
+}
+
+.navbar-toggle {
+    border: none;
+    background: transparent !important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .navbar-default .navbar-nav {
+        background: #333;
+        text-align: center;
+    }
+    
+    .navbar-default .navbar-nav > li {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    .navbar-default .navbar-nav > li > a {
+        font-size: 16px;
+    }
+}
